@@ -8,6 +8,7 @@ const RESET_BUTTON_TEXT = 'New game'
 const WINNER_MESSAGE = '🎈 ...YOU ...ARE ...A \n\n WINNER! 🎈'
 const LOSER_MESSAGE = " 💥 OH NO! 💥 A MINE! ... that's ok, try again 👍"
 const BORDER_CELLS = [[-1,-1],[0,-1],[1,-1],[-1,0],[1,0],[-1,1],[0,1],[1,1]]
+const CLASS_IS_CLEARED = "cellContents--isCleared"
 
 class App extends Component {
 
@@ -19,8 +20,6 @@ class App extends Component {
   static defaultProps = {
     boardRowsCount: BOARD_SIZE,
     boardColsCount: BOARD_SIZE,
-    classInitial: "cellContents--initial",
-    classIsCleared: "cellContents--isCleared",
   }
 
   state = {
@@ -137,7 +136,7 @@ clearCell({ col, row }) { // AKA, when a player clicks a cell (AKA, when they HO
 
   // No winner & no mines means "continue game play..."
   else {
-    board[row][col].status = this.props.classIsCleared
+    board[row][col].status = CLASS_IS_CLEARED
     board[row][col].content = this.adjacentCells( col, row )
     board[row][col].cleared = true
 
