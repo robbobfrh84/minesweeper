@@ -1,7 +1,7 @@
 # Minesweeper
 
 A simple Minesweeper clone using ReactJS!
- -[(https://robbobfrh84.github.io/minesweeper/](https://robbobfrh84.github.io/minesweeper/)
+ - Live Example: [https://robbobfrh84.github.io/minesweeper/](https://robbobfrh84.github.io/minesweeper/)
 
 ## Setup
 
